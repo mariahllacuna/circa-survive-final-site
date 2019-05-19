@@ -29,5 +29,9 @@ body {
 .topnav a.active {
   background-color: #4CAF50;
   color: white;
-}
-</style>
+
+  <style>
+  img {
+    float: left;
+  }
+  </style>
