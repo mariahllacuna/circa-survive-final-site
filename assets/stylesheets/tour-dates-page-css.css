@@ -1,6 +1,9 @@
 /* <background image> */
 body {
-  background-image: url(../images/amulet-album-cover-less-opacity.jpg)
+  background-image: url(../images/circa-survive-logo-wallpaper.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 /* nav bar css */
 <style>

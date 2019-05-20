@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+<title>Circa Survive</title>
+<link rel="stylesheet" type="text/css" href="assets/stylesheets/merch-page-css.css">
+<link rel="stylesheet" type="text/css" href="assets/stylesheets/javascript-filtering.css">
+<body>
+  <div class="topnav">
+    <a href="index.html">Home</a>
+      <a href="about-page.html">About</a>
+      <a href="media-page.html">Media</a>
+      <a href="discography-page.html">Discography</a>
+      <a class="active" href="merch-page.html">Merch</a>
+      <a href="tour-dates.html">Tour Dates</a>
+    </div>
+</head>
+<!-- Control buttons -->
+<br>
+<br>
+<div id="myBtnContainer">
+  <button class="btn active" onclick="filterSelection('all')">All Items</button>
+  <button class="btn" onclick="filterSelection('clothing')">Clothing</button>
+  <button class="btn" onclick="filterSelection('bags')">Bags</button>
+  <button class="btn" onclick="filterSelection('art')">Art</button>
+</div>
+
+<!-- The filterable elements. Note that some have multiple class names (this can be used if they belong to multiple categories) -->
+<div class="container">
+  <div class="row">
+  <div class="filterDiv clothing"><img src="./assets/images/merch-items/amulet-tee.png" style="width:100%"/></div>
+  <div class="filterDiv bags"><img src="./assets/images/merch-items/juturna-tote.jpg" style="width:100%"/></div>
+  <div class="filterDiv art print"><img src="./assets/images/merch-items/circa-poster.png" style="width:100%"/></div>
+  <div class="filterDiv art print"><img src="./assets/images/merch-items/blue-sky-noise-patch.png" style="width:100%"/></div>
+  </div>
+    <div class="row">
+  <div class="filterDiv clothing"><img src="./assets/images/merch-items/amulet-tee-2.png" style="width:100%"/></div>
+  <div class="filterDiv clothing"><img src="./assets/images/merch-items/circa-hoddie-2.png" style="width:100%"/></div>
+  <div class="filterDiv bags"><img src="./assets/images/merch-items/on-letting-go-backpack.jpg" style="width:100%"/></div>
+  <div class="filterDiv clothing"><img src="./assets/images/merch-items/descensus-tee.png" style="width:100%"/></div>
+  </div>
+</div>
+
+<script>
+    filterSelection("all")
+    function filterSelection(c) {
+      var x, i;
+      x = document.getElementsByClassName("filterDiv");
+      if (c == "all") c = "";
+      // Add the "show" class (display:block) to the filtered elements, and remove the "show" class from the elements that are not selected
+      for (i = 0; i < x.length; i++) {
+        w3RemoveClass(x[i], "show");
+        if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+      }
+    }
+
+    // Show filtered elements
+    function w3AddClass(element, name) {
+      var i, arr1, arr2;
+      arr1 = element.className.split(" ");
+      arr2 = name.split(" ");
+      for (i = 0; i < arr2.length; i++) {
+        if (arr1.indexOf(arr2[i]) == -1) {
+          element.className += " " + arr2[i];
+        }
+      }
+    }
+
+    // Hide elements that are not selected
+    function w3RemoveClass(element, name) {
+      var i, arr1, arr2;
+      arr1 = element.className.split(" ");
+      arr2 = name.split(" ");
+      for (i = 0; i < arr2.length; i++) {
+        while (arr1.indexOf(arr2[i]) > -1) {
+          arr1.splice(arr1.indexOf(arr2[i]), 1);
+        }
+      }
+      element.className = arr1.join(" ");
+    }
+
+    // Add active class to the current control button (highlight it)
+    var btnContainer = document.getElementById("myBtnContainer");
+    var btns = btnContainer.getElementsByClassName("btn");
+    for (var i = 0; i < btns.length; i++) {
+      btns[i].addEventListener("click", function() {
+        var current = document.getElementsByClassName("active");
+        current[0].className = current[0].className.replace(" active", "");
+        this.className += " active";
+      });
+    }
+  </script>
+</html>

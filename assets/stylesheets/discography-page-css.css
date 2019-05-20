@@ -1,5 +1,8 @@
 body {
-  background-image: url(../images/circa-survive-logo-wallpaper.jpg)
+  background-image: url(../images/violent-waves-circa-wallpaper-space-only.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 /* <nav bar css> */
 <style>
@@ -31,9 +34,22 @@ body {
   color: white;
 }
 /* <album layout css> */
+
 .container {
-  max width:1200px;
-  margin: auto;
-  padding-left: 15px;
-  padding-right:15px;
+max-width: 800px;
+height: auto;
+margin: auto;
+padding: 25px 25px;
+}
+
+.album-wrapper {
+width: 100%;
+height: auto;
+text-align: center;
+}
+
+.album {
+width: 200px;
+height: 200px;
+display:inline-grid;
 }

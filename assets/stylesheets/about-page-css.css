@@ -1,5 +1,8 @@
 body {
-  background-image: url(../images/violent-waves-circa-wallpaper.png);
+  background-image: url(../images/violent-waves-circa-wallpaper-space-only.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 /* <nav bar css> */
 <style>

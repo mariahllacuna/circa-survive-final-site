@@ -1,5 +1,8 @@
 body {
-  background-image: url(../images/violent-waves-circa-wallpaper-space-only.png)
+  background-image: url(../images/violent-waves-circa-wallpaper-space-only.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 /* <nav bar css> */
 <style>
@@ -31,6 +34,7 @@ body {
   color: white;
 }
 </style>
+/* gallery css */
 .gallery {
   margin: 10px 50px;
 }
