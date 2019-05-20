@@ -1,6 +1,7 @@
 body {
   background-image: url(../images/circa-survive-logo-wallpaper.jpg)
 }
+/* <nav bar css> */
 <style>
 /* Add a black background color to the top navigation */
 .topnav {
@@ -10,7 +11,7 @@ body {
 
 /* Style the links inside the navigation bar */
 .topnav a {
-  float: right;
+  float: left;
   color: #f2f2f2;
   text-align: center;
   padding: 14px 16px;
@@ -28,4 +29,11 @@ body {
 .topnav a.active {
   background-color: #4CAF50;
   color: white;
+}
+/* <album layout css> */
+.container {
+  max width:1200px;
+  margin: auto;
+  padding-left: 15px;
+  padding-right:15px;
 }

@@ -1,7 +1,7 @@
 body {
   background-image: url(../images/violent-waves-circa-wallpaper.png);
 }
-
+/* <nav bar css> */
 <style>
 /* Add a black background color to the top navigation */
 .topnav {
@@ -11,7 +11,7 @@ body {
 
 /* Style the links inside the navigation bar */
 .topnav a {
-  float: right;
+  float: left;
   color: #f2f2f2;
   text-align: center;
   padding: 14px 16px;
